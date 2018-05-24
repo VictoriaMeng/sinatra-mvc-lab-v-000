@@ -2,7 +2,7 @@ class PigLatinizer
 
   def initialize
     blends = %w(bl br ch d cr dr fl fr gl gr pl pr sc sh sk sl sm sn sp st sw th tr tw wh wr sch scr shr sph spl spr squ str thr)
-    @blends = blends + words.map { |word| word.capitalize }
+    @blends = blends + blends.map { |word| word.capitalize }
     @vowels = %w(a e i o u A E I O U)
   end
 
