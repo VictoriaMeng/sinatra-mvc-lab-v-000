@@ -11,7 +11,6 @@ class PigLatinizer
   end
 
   def single(word)
-    binding.pry
     if word.size == 1 || @vowels.include?(word[0])
       word << "way"
     elsif @blends.include?(word[0..1])
