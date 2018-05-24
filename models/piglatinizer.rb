@@ -7,6 +7,10 @@ class PigLatinizer
   end
 
   def single(word)
-    word << word.slice!(0) << "ay"
+    if word.size == 1
+      word << "ay"
+    else
+      word << word.slice!(0) << "ay"
+    end
   end
 end
