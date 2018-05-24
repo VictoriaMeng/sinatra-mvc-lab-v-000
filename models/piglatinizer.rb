@@ -11,7 +11,7 @@ class PigLatinizer
   end
 
   def single(word)
-    if word.size == 1
+    if word.size == 1 || @vowels.include?(word[0])
       word << "way"
     elsif @blends.include?(word[0..1])
       word << word.slice!(0..1) << "ay"
